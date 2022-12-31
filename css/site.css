@@ -36,7 +36,7 @@ h6 {
 }
 
 footer .social > a {
-  padding-right: 1rem;
+  padding-right: 0rem;
   color: var(--white-color);
   opacity: 0.75;
 }
@@ -76,4 +76,9 @@ pre[class*='language-'] {
 main > .container {
   padding: 60px 15px 0;
   margin-bottom: 5rem;
+}
+
+.logoFont {
+  font-family: 'Martel Sans';
+  font-weight: 600;
 }
