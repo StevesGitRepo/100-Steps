@@ -4,7 +4,24 @@
   --dark-color: #292929;
   --white-color: #e7e7e7;
   --silver-color: rgb(122, 143, 161);
+  --logoBlue-color: rgb(125, 100, 250);
   --sinovaBlue-color: rgb(19, 205, 232);
+}
+
+.btn-outline-dark {
+  padding-bottom: 1px;
+  color: var(--logoBlue-color);
+  border-color: var(--logoBlue-color);
+  font-weight: bold;
+  font-family: 'Martel Sans';
+}
+
+.odd {
+}
+
+.even {
+  font-weight: bolder;
+  color: var(--logoBlue-color);
 }
 
 body {
@@ -43,7 +60,7 @@ footer .social > a {
 
 footer .social > a:hover {
   opacity: 1;
-  color: var(--sinovaBlue-color);
+  color: var(--logoBlue-color);
 }
 
 .bsIcon {
@@ -63,7 +80,7 @@ footer .social > a:hover {
 }
 
 .checklist > li i {
-  color: var(--sinovaBlue-color);
+  color: var(--logoBlue-color);
 }
 
 code[class*='language-'],

@@ -1,50 +1,53 @@
 // get the values from the Page
 // starts our controller function
-const getValues = () => {
+function getValues() {
   // get values from the page
   let startValue = document.getElementById('startValue').value;
   let endValue = document.getElementById('endValue').value;
+  let numbers = generateNumbers(startValue, endValue);
 
+  // alert('The Start Value is ' + startValue);
+  // alert('The End Value is ' + endValue);
   // We need to validate our input
   //parse into Integers
   startValue = parseInt(startValue);
   endValue = parseInt(endValue);
+  // alert('The Combined Value is ' + (startValue + endValue));
 
   if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
     //we call generateNumbers
-    let numbers = generateNumbers(startValue, endValue);
-    // we call displayNumbers
-    displayNumbers(numbers);
   } else {
     alert('You must enter integers');
   }
-};
 
-//we call generateNumbers
-// numbers = generateNumbers(startValue, endValue);
-// generate numbers from startValue to the endValue
-// logic functions(s)
+  // we call displayNumbers
+  displayNumbers(numbers);
+}
 
-// const generateNumbers = (sValue, eValue) => {
-//   let numbers = [];
+function generateNumbers(sValue, eValue) {
+  let numbers = [];
+  for (let index = sValue; index <= eValue; index++) {
+    numbers.push(index);
+  }
 
-//get all numbers from start to end
+  return numbers;
+}
 
-//   for (let index = sValue; index <= eValue; index++) {
-//     numbers.push(index);
-//   }
+function displayNumbers(numbers) {
+  let templateRows = '';
 
-//   return numbers;
-// };
-
-// display the numbers and mark even numbers bold
-// display or view functions
-const displayNumbers = (numbers) => {
-  let templateRow = '';
-
-  for (let i = 0; i <= numbers.length; i++) {
+  for (let index = 0; index < numbers.length; index++) {
+    let className = 'even';
     let number = numbers[index];
+
+    if (number % 2 === 0) {
+      className = 'even';
+    } else {
+      className = 'odd';
+    }
+
+    templateRows += `<tr><td class="${className}">${number}</td></tr>`;
   }
 
   document.getElementById('results').innerHTML = templateRows;
-};
+}
