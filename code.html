@@ -38,7 +38,7 @@
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand logoFont" href="#"
+        <a class="navbar-brand logoFont" href="index.html"
           ><img src="/img/LogoGradientCircled.png" width="30" class="me-2" />100
           STEPS</a
         >
@@ -68,7 +68,12 @@
               <a class="nav-link" target="_blank" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="#">Git Repo</a>
+              <a
+                class="nav-link"
+                target="_blank"
+                href="https://github.com/StevesGitRepo/100-Steps"
+                >Git Repo</a
+              >
             </li>
           </ul>
         </div>
@@ -80,24 +85,101 @@
     <main class="flex-shrink-0">
       <div class="container py-5 px-5 mt-5">
         <h2 class="border-1 border-bottom border-dark">
-          The Code for 100 STEPS
+          <img src="/img/100 STEPS SIGN.png" width="40" />
+          100 STEPS: The Code
         </h2>
         <div class="row row-cols-1 row-cols-lg-2">
           <div class="col-lg-8">
             <pre class="line-numbers"><code class="language-javascript">
-                    // Call Hello World
-function helloWorld() {
-  alert('Hello World');
-}
+              // get the values from the page, starts our controller function
+              const getValues = () => {
+                // get values from the page
+                let startValue = document.getElementById('startValue').value;
+                let endValue = document.getElementById('endValue').value;
+                let numbers = generateNumbers(startValue, endValue);
+              
+                // We need to validate our input
+                //parse into Integers
+                startValue = parseInt(startValue);
+                endValue = parseInt(endValue);
+              
+                // the following script checks for integers
+                // run before and after the parseInt to check:
+                // alert('The Combined Value is ' + (startValue + endValue));
+              
+                if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
+                  //we call generateNumbers
+                } else {
+                  alert('You must enter integers');
+                }
+              
+                // scripts for exceeding scope of the project:
+                if (startValue < -99 || endValue > 199) {
+                  alert('ERROR: DOES NOT COMPUTE');
+                  return false;
+                }
+                if (startValue < 0 || endValue > 100) {
+                  alert('This still works but try not to break the internet, ok?');
+                }
+              
+                // we call displayNumbers
+                displayNumbers(numbers);
+              };
+              
+              const generateNumbers = (sValue, eValue) => {
+                let numbers = [];
+              
+                for (let index = sValue; index <= eValue; index++) {
+                  numbers.push(index);
+                }
+              
+                return numbers;
+              };
+              
+              const displayNumbers = (numbers) => {
+                let templateRows = '';
+              
+                for (let index = 0; index < numbers.length; index++) {
+                  let className = 'even';
+                  let number = numbers[index];
+              
+                  if (number % 2 === 0) {
+                    className = 'even';
+                  } else {
+                    className = 'odd';
+                  }
+              
+                  templateRows += `<tr><td class="${className}">${number}</td></tr>`;
+                }
+              
+                document.getElementById('results').innerHTML = templateRows;
+              };
+              
+
                 </code>
             </pre>
           </div>
           <div class="col-lg-4">
-            <p>The Code is structured in one function.</p>
-            <h5>Hello World</h5>
+            <p>100 STEPS is structured into three Javascript functions.</p>
+            <h5>Hello World!</h5>
             <p>
-              Hello World is a function that displays an alert with a message of
-              "Hello World".
+              The "getValues" function takes in the inputted values from the
+              page. The "parseInt" function parses the values into integers. The
+              values are checked and an alert populates if integers are not
+              used. Progressive Boolean conditional statements create alerts if
+              users input integers outside the scope of the app.
+            </p>
+            <p>
+              The "generateNumbers" function generates an array. A for-loop is
+              used to generated integers at the user-inputted starting value
+              (startValue) to the ending value (endValue). Numbers are returned.
+            </p>
+            <p>
+              Finally, the "displayNumbers" function creates a string of the
+              results. Another for-loop is used to determine odds or evens using
+              the modulo operator (%). Bold weight and a custom color is
+              assigned to the even integers using a CSS element. The "results"
+              variable then feeds the integers into the table on the page.
             </p>
           </div>
         </div>
@@ -129,17 +211,19 @@ function helloWorld() {
           >
             <div class="row">
               <div class="col social">
-                <a href="#" target="_blank"
+                <a
+                  href="https://www.linkedin.com/in/steve-szymanski-245849238/"
+                  target="_blank"
                   ><i class="fab fa-linkedin fa-2x"></i
                 ></a>
               </div>
               <div class="col social">
-                <a href="#" target="_blank"
+                <a href="https://twitter.com/SteveKSzymanski" target="_blank"
                   ><i class="fab fa-twitter fa-2x"></i
                 ></a>
               </div>
               <div class="col social">
-                <a href="#" target="_blank"
+                <a href="https://github.com/StevesGitRepo" target="_blank"
                   ><i class="fab fa-github fa-2x"></i
                 ></a>
               </div>
