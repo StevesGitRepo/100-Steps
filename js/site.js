@@ -22,7 +22,7 @@ const getValues = () => {
   // these scripts alert the user that they are exceeding the scope of the project
   if (startValue === -99 && endValue === 199) {
     alert(
-      'Congratulations! You have reached the extreme limits of time and space for this loop. Have a nice day!'
+      "Congratulations! You have located this loop's extreme limits of time and space. Have a nice day! :)"
     );
     displayNumbers(numbers);
   }
@@ -36,8 +36,15 @@ const getValues = () => {
     endValue !== 199
   ) {
     alert(
-      'This value still works but a wider range may not. Can you find the edges of the range?'
+      'These value work and a wider range of values still exist. Can you find the both edges of the number range?'
     );
+  }
+  if (
+    (startValue < 1 || endValue > 100) &&
+    (startValue === -99 || endValue === 199) &&
+    !(startValue === -99 && endValue === 199)
+  ) {
+    alert('You found one of the range limits. One more to go!');
   }
 
   // we call displayNumbers
