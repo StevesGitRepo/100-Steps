@@ -20,6 +20,7 @@ const getValues = () => {
   }
 
   // these scripts alert the user that they are exceeding the scope of the project
+  // and give hints to the min/max integer ranges of the loop
   if (startValue === -99 && endValue === 199) {
     alert(
       "Congratulations! You have located this loop's extreme limits of time and space. Have a nice day! :)"
