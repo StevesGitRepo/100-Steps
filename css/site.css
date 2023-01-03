@@ -104,3 +104,7 @@ main > .container {
   font-family: 'Martel Sans';
   font-weight: 600;
 }
+
+.footerContact {
+  font-size: small;
+}
