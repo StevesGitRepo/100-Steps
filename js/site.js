@@ -20,12 +20,24 @@ const getValues = () => {
   }
 
   // these scripts alert the user that they are exceeding the scope of the project
+  if (startValue === -99 && endValue === 199) {
+    alert(
+      'Congratulations! You have reached the extreme limits of time and space for this loop. Have a nice day!'
+    );
+    displayNumbers(numbers);
+  }
   if (startValue < -99 || endValue > 199) {
-    alert('ERROR: DOES NOT COMPUTE');
+    alert('Error: Value limits exceeded. Please try again.');
     return false;
   }
-  if (startValue < 1 || endValue > 100) {
-    alert('This still works but try not to break the internet, ok?');
+  if (
+    (startValue < 1 || endValue > 100) &&
+    startValue !== -99 &&
+    endValue !== 199
+  ) {
+    alert(
+      'This value still works but a wider range may not. Can you find the edges of the range?'
+    );
   }
 
   // we call displayNumbers

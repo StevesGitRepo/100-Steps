@@ -108,3 +108,7 @@ main > .container {
 .footerContact {
   font-size: small;
 }
+
+.example {
+  font-style: italic;
+}
