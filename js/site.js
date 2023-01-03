@@ -36,7 +36,7 @@ const getValues = () => {
     endValue !== 199
   ) {
     alert(
-      'These value work and a wider range of values still exist. Can you find the both edges of the number range?'
+      'A wider range of values still exist. Can you find the both edges of the number range?'
     );
   }
   if (
