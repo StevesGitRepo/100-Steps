@@ -23,7 +23,7 @@ const getValues = () => {
   // and give hints to the min/max integer ranges of the loop
   if (startValue === -99 && endValue === 199) {
     alert(
-      "Congratulations! You have successfully stepped into this loop's limits of time and space. I hope you have enjoyed exploring these conditional statements. Have a nice day! :)"
+      "Congratulations! You have successfully stepped to this loop's limits of time and space. I hope you have enjoyed exploring these conditional statements. Have a nice day! :)"
     );
     displayNumbers(numbers);
   }
