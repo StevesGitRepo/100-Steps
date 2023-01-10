@@ -1,3 +1,5 @@
+![100 STEPS 3](https://user-images.githubusercontent.com/104333881/211468091-a2320c0c-b82c-4da6-bf34-d22e644bee0c.png)
+
 100 STEPS is structured into three Javascript functions.
 
 Hello World!
