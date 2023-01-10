@@ -21,20 +21,20 @@ const getValues = () => {
 
   // these scripts alert the user that they are exceeding the scope of the project
   // and give hints to the min/max integer ranges of the loop
-  if (startValue === -99 && endValue === 199) {
+  if (startValue === -100 && endValue === 200) {
     alert(
-      "Congratulations! You have successfully stepped to this loop's limits of time and space. I hope you have enjoyed exploring these conditional statements. Have a nice day! :)"
+      "Congratulations! You discovered this loop's limits of time and space. I hope you have enjoyed exploring these conditional statements. Have a nice day! :)"
     );
     displayNumbers(numbers);
   }
-  if (startValue < -99 || endValue > 199) {
+  if (startValue < -100 || endValue > 200) {
     alert('Value limits exceeded. Please try again.');
     return false;
   }
   if (
     (startValue < 1 || endValue > 100) &&
-    startValue !== -99 &&
-    endValue !== 199
+    startValue !== -100 &&
+    endValue !== 200
   ) {
     alert(
       'A wider range of values still exist. Can you find the both edges of the number range?'
@@ -42,8 +42,8 @@ const getValues = () => {
   }
   if (
     (startValue < 1 || endValue > 100) &&
-    (startValue === -99 || endValue === 199) &&
-    !(startValue === -99 && endValue === 199)
+    (startValue === -100 || endValue === 200) &&
+    !(startValue === -100 && endValue === 200)
   ) {
     alert(
       'Well done! You have found one of the range limits. One down, one to go!'

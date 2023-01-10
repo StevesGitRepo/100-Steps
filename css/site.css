@@ -10,14 +10,14 @@
 
 .btn-outline-dark {
   padding-bottom: 1px;
-  color: var(--logoBlue-color);
-  border-color: var(--logoBlue-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
   font-weight: bolder;
   font-family: 'Martel Sans';
 }
 
 .boldFont {
-  color: var(--logoBlue-color);
+  color: var(--primary-color);
   font-weight: bold;
 }
 
@@ -26,7 +26,7 @@
 
 .even {
   font-weight: bold;
-  color: var(--logoBlue-color);
+  color: var(--primary-color);
 }
 
 body {
@@ -65,27 +65,27 @@ footer .social > a {
 
 footer .social > a:hover {
   opacity: 1;
-  color: var(--logoBlue-color);
+  color: var(--primary-color);
 }
 
 .bsIcon {
-  color: rgb(86, 61, 124);
+  color: rgb(255, 255, 255);
 }
 
 .jsIcon {
-  color: rgb(240, 219, 79);
+  color: rgb(255, 255, 255);
 }
 
 .html5Icon {
-  color: rgb(227, 76, 38);
+  color: rgb(255, 255, 255);
 }
 
 .css3Icon {
-  color: rgb(38, 77, 228);
+  color: rgb(255, 255, 255);
 }
 
 .checklist > li i {
-  color: var(--logoBlue-color);
+  color: var(--primary-color);
 }
 
 code[class*='language-'],
@@ -111,4 +111,8 @@ main > .container {
 
 .example {
   font-style: italic;
+}
+
+.background {
+  background-color: rgb(222, 222, 222);
 }
